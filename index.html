@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KDB — Software Engineer</title>
+<title>KDB — Développeur logiciel</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -110,52 +110,42 @@ section:not(#home){padding:clamp(4.5rem,8vw,8rem) clamp(1.5rem,5vw,4.5rem)}
 
 /* ── WORK ── */
 #work{border-top:1px solid var(--ln);max-width:1180px;margin:0 auto;width:100%;padding-left:clamp(1.5rem,5vw,4.5rem);padding-right:clamp(1.5rem,5vw,4.5rem)}
-.w-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3.5rem;flex-wrap:wrap;gap:1rem}
+.w-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
 .w-count{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--m);padding-bottom:.3rem}
 .p-list{list-style:none}
-.p-item{border-top:1px solid var(--ln);transition:border-color .3s}
+.p-item{border-top:1px solid var(--ln)}
 .p-item:last-child{border-bottom:1px solid var(--ln)}
-.p-item:hover{border-color:rgba(255,0,0,.25)}
-.p-row{display:grid;grid-template-columns:3rem 1fr auto;align-items:center;gap:1.8rem;padding:1.7rem 0;cursor:pointer}
-.p-num{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;color:var(--m2)}
-.p-name{font-family:'Syne',sans-serif;font-weight:600;font-size:clamp(1rem,2vw,1.4rem);letter-spacing:-.02em;transition:color .3s}
-.p-item:hover .p-name{color:var(--gold)}
-.p-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.35rem}
-.p-tag{font-family:'JetBrains Mono',monospace;font-size:.48rem;letter-spacing:.1em;text-transform:uppercase;color:var(--m2);border:1px solid var(--ln);padding:.22rem .55rem}
-.p-arr{font-size:1rem;color:var(--m2);transition:color .3s,transform .4s var(--ease)}
-.p-item:hover .p-arr{color:var(--gold);transform:rotate(-45deg) translate(3px,-3px)}
-.p-body{max-height:0;overflow:hidden;transition:max-height .55s var(--ease)}
-.p-body.open{max-height:320px}
-.p-bi{padding:0 3rem 1.8rem;border-top:1px solid var(--ln)}
-.p-desc{font-size:.9rem;color:var(--m);line-height:1.82;max-width:64ch;padding-top:1.4rem;margin-bottom:1rem}
-.p-stack{display:flex;gap:.5rem;flex-wrap:wrap}
-.p-chip{font-family:'JetBrains Mono',monospace;font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,0,0,.07);border:1px solid rgba(255,0,0,.18);color:var(--gold);padding:.3rem .75rem}
+.p-link{display:grid;grid-template-columns:176px 1fr auto;gap:2rem;align-items:center;padding:1.6rem 0;color:inherit}
+.p-thumb{width:176px;aspect-ratio:180/112;border-radius:12px;overflow:hidden;border:1px solid var(--ln);background:#0a0a0f;transition:border-color .3s,transform .5s var(--ease)}
+.p-thumb svg{display:block;width:100%;height:100%}
+.p-link:hover .p-thumb{border-color:rgba(255,0,0,.55);transform:translateY(-3px)}
+.p-name{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(1.05rem,2vw,1.4rem);letter-spacing:-.02em;margin-bottom:.6rem;transition:color .3s}
+.p-n{color:var(--m2)}
+.p-link:hover .p-name{color:var(--gold)}
+.p-badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,0,0,.35);border-radius:999px;padding:.24rem .65rem;margin-bottom:.7rem}
+.p-stack{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:var(--m);margin-bottom:.6rem}
+.p-desc{font-size:.92rem;color:var(--m);line-height:1.75;max-width:70ch}
+.p-arr{font-size:1.1rem;color:var(--m2);transition:color .3s,transform .4s var(--ease)}
+.p-link:hover .p-arr{color:var(--gold);transform:rotate(-45deg) translate(3px,-3px)}
+.w-more{margin-top:2.4rem}
+.more-link{display:inline-flex;align-items:center;gap:.7rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--w);border-bottom:1px solid rgba(255,0,0,.5);padding-bottom:.35rem;transition:color .3s,gap .4s var(--ease)}
+.more-link:hover{color:var(--gold);gap:1.1rem}
 
 /* ── SKILLS ── */
 #skills{border-top:1px solid var(--ln);background:rgba(15,15,19,.5)}
 .sk-inner{max-width:1180px;margin:0 auto}
-.sk-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ln);margin-top:2.5rem}
-.sk-cat{border-right:1px solid var(--ln);border-bottom:1px solid var(--ln)}
-.sk-cat:nth-child(2n){border-right:none}
-.sk-head{display:flex;align-items:center;justify-content:space-between;padding:1.3rem 1.6rem;cursor:pointer;transition:background .3s}
-.sk-head:hover{background:rgba(255,0,0,.03)}
-.sk-left{display:flex;align-items:center;gap:.9rem}
-.sk-ico{width:36px;height:36px;border-radius:8px;display:grid;place-items:center;font-size:1rem;flex-shrink:0}
-.sk-name{font-family:'Syne',sans-serif;font-weight:600;font-size:.9rem}
-.sk-cnt{font-family:'JetBrains Mono',monospace;font-size:.48rem;letter-spacing:.1em;color:var(--m);margin-top:.12rem}
-.sk-ch{color:var(--m2);transition:transform .4s var(--ease),color .3s;font-size:.85rem}
-.sk-cat.op .sk-ch{transform:rotate(180deg);color:var(--gold)}
-.sk-body{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
-.sk-cat.op .sk-body{max-height:280px}
-.sk-items{display:flex;flex-wrap:wrap;gap:.45rem;padding:0 1.6rem 1.4rem}
-.sk-item{font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--w);border:1px solid var(--ln);padding:.28rem .7rem;transition:border-color .3s,color .3s}
-.sk-item:hover{border-color:rgba(255,0,0,.4);color:var(--gold)}
-.ic-dev{background:rgba(79,142,247,.1);color:#4f8ef7}
-.ic-ai{background:rgba(168,85,247,.1);color:#a855f7}
-.ic-db{background:rgba(34,197,94,.1);color:#22c55e}
-.ic-des{background:rgba(236,72,153,.1);color:#ec4899}
-.ic-tl{background:rgba(234,179,8,.1);color:#eab308}
-.ic-mb{background:rgba(20,184,166,.1);color:#14b8a6}
+.sk-table{margin-top:2.2rem;border-top:1px solid var(--ln)}
+.sk-row{display:grid;grid-template-columns:minmax(170px,1fr) 2fr;gap:2rem;padding:1.25rem 0;border-bottom:1px solid var(--ln);transition:padding-left .4s var(--ease)}
+.sk-row:hover{padding-left:.7rem}
+.sk-dom{font-family:'Syne',sans-serif;font-weight:600;font-size:1rem;transition:color .3s}
+.sk-row:hover .sk-dom{color:var(--gold)}
+.sk-tech{color:var(--m);font-size:.95rem;line-height:1.7}
+.sk-tech em{font-style:normal;color:var(--m2);font-size:.85em}
+.sk-sec{margin-top:4.5rem}
+.sk-sec-t{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(1.2rem,2.2vw,1.7rem);letter-spacing:-.02em;margin-bottom:.4rem}
+.sk-sec-d{font-size:.88rem;color:var(--m);margin-bottom:1.4rem;max-width:56ch}
+.sk-sec .sk-dom{color:var(--m)}
+@media(max-width:700px){.sk-row{grid-template-columns:1fr;gap:.35rem}}
 
 /* ── ABOUT ── */
 #about{border-top:1px solid var(--ln);max-width:1180px;margin:0 auto;width:100%;padding-left:clamp(1.5rem,5vw,4.5rem);padding-right:clamp(1.5rem,5vw,4.5rem)}
@@ -182,54 +172,25 @@ section:not(#home){padding:clamp(4.5rem,8vw,8rem) clamp(1.5rem,5vw,4.5rem)}
 .co-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:start}
 .co-big{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.2rem,4.5vw,4rem);letter-spacing:-.03em;line-height:1;margin-bottom:1.3rem}
 .co-big em{font-style:italic;font-weight:400;color:var(--gold)}
-.co-desc{font-size:.92rem;color:var(--m);line-height:1.8;max-width:38ch;margin-bottom:2.2rem}
-.co-links{display:flex;flex-direction:column;gap:.7rem}
-.co-link{display:flex;align-items:center;gap:.9rem;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;color:var(--m);transition:color .3s;padding:.45rem 0;border-bottom:1px solid var(--ln)}
+.co-desc{font-size:.95rem;color:var(--m);line-height:1.8;max-width:42ch}
+.co-opps{margin-top:2.2rem}
+.co-opps-l{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--m);margin-bottom:.8rem}
+.co-opps-list{display:flex;gap:.6rem;flex-wrap:wrap}
+.co-opps-list span{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--w);border:1px solid rgba(255,0,0,.4);padding:.55rem 1rem}
+.co-right{display:flex;flex-direction:column;gap:1.2rem}
+.co-main{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:1rem;row-gap:.2rem;background:var(--gold);color:var(--bg);padding:1.4rem 1.6rem;transition:background .3s,transform .3s var(--ease)}
+.co-main:hover{background:var(--gold2);transform:translateY(-2px)}
+.co-main-t{font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.co-main-s{grid-column:1;font-size:.82rem;opacity:.85}
+.co-main .co-arr{grid-column:2;grid-row:1/3;font-size:1.4rem}
+.co-links{display:flex;flex-direction:column}
+.co-link{display:flex;align-items:center;gap:.9rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--m);transition:color .3s;padding:.8rem 0;border-bottom:1px solid var(--ln)}
+.co-link:first-child{border-top:1px solid var(--ln)}
 .co-link:hover{color:var(--gold)}
+.co-link b{font-weight:400;color:var(--w);margin-left:auto;margin-right:.6rem;letter-spacing:.04em}
+.co-link:hover b{color:var(--gold)}
 .co-arr{transition:transform .3s var(--ease)}
 .co-link:hover .co-arr{transform:translateX(4px)}
-.co-form{display:flex;flex-direction:column;gap:1.1rem}
-.f-label{font-family:'JetBrains Mono',monospace;font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;color:var(--m);display:block;margin-bottom:.4rem}
-.f-input,.f-textarea{background:rgba(255,255,255,.03);border:1px solid var(--ln);color:var(--w);font-family:'Inter',sans-serif;font-size:.88rem;padding:.85rem 1rem;outline:none;transition:border-color .3s;width:100%}
-.f-input:focus,.f-textarea:focus{border-color:rgba(255,0,0,.5)}
-.f-textarea{min-height:115px;resize:none}
-.f-submit{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;background:var(--gold);color:var(--bg);padding:.95rem 1.8rem;font-weight:500;display:inline-flex;align-items:center;gap:.55rem;align-self:flex-start;transition:background .3s,transform .3s var(--ease)}
-.f-submit:hover{background:var(--gold2);transform:translateY(-2px)}
-
-/* ── TESTIMONIALS ── */
-#testi{border-top:1px solid var(--ln);overflow:hidden;position:relative}
-#testi::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);background-size:56px 56px;animation:gs 20s linear infinite;opacity:.45;z-index:0}
-#testi::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:350px;background:radial-gradient(ellipse,rgba(255,0,0,.05) 0%,transparent 70%);pointer-events:none;z-index:0}
-.tm-wrap{position:relative;z-index:1;overflow:hidden}
-.tm-row{display:flex;align-items:center;height:60px;overflow:hidden;border-top:1px solid var(--ln)}
-.tm-row:last-child{border-bottom:1px solid var(--ln)}
-.tm-track{display:flex;align-items:center;width:max-content;height:100%}
-.tm-track.f{animation:mq 20s linear infinite}
-.tm-track.r{animation:mq 16s linear infinite reverse}
-.tm-item{display:flex;align-items:center;gap:.6rem;padding:0 2.5rem;white-space:nowrap;border-right:1px solid var(--ln);font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(.9rem,2vw,1.4rem);letter-spacing:-.01em;text-transform:uppercase;color:rgba(240,237,232,.07);transition:color .3s;user-select:none}
-.tm-item:hover{color:rgba(255,0,0,.28)}
-.tm-sep{color:var(--gold);opacity:.35;font-size:.7rem}
-.tm-stage{position:relative;z-index:2;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(3rem,6vw,6rem);align-items:center;padding:clamp(4rem,7vw,7rem) clamp(1.5rem,5vw,4.5rem)}
-.tc-cnt{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.2em;color:var(--m2);margin-top:1.8rem;display:flex;align-items:center;gap:.7rem}
-.tc-cur{color:var(--gold);font-size:.8rem;font-weight:500}
-.tc-btns{display:flex;align-items:center;gap:.7rem;margin-top:1rem}
-.tc-btn{width:42px;height:42px;border:1px solid var(--ln);background:rgba(255,255,255,.02);display:grid;place-items:center;font-size:1rem;color:var(--m);cursor:pointer;transition:all .3s}
-.tc-btn:hover{border-color:var(--gold);color:var(--gold)}
-.tc-prog{flex:1;height:1px;background:var(--ln);position:relative;overflow:hidden}
-.tc-pf{position:absolute;left:0;top:0;bottom:0;background:var(--gold)}
-.tc-dots{display:flex;gap:.4rem;margin-top:1.4rem}
-.tc-dot{width:6px;height:6px;border-radius:50%;background:var(--m2);cursor:pointer;transition:all .4s var(--ease)}
-.tc-dot.act{width:22px;border-radius:3px;background:var(--gold)}
-.tc-wrap{position:relative;min-height:280px}
-.tc-card{position:absolute;inset:0;background:rgba(10,10,14,.85);border:1px solid var(--ln);padding:2.2rem;display:flex;flex-direction:column;justify-content:space-between;opacity:0;transform:translateY(16px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none;backdrop-filter:blur(18px)}
-.tc-card.act{opacity:1;transform:none;pointer-events:all}
-.tc-card.out{opacity:0;transform:translateY(-16px)}
-.tq-m{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;line-height:.7;color:var(--gold);display:block;margin-bottom:.9rem;opacity:.65}
-.tq-t{font-size:clamp(.82rem,.9vw,.93rem);line-height:1.85;color:rgba(240,237,232,.58);flex:1;margin-bottom:1.6rem;font-style:italic}
-.tq-a{display:flex;align-items:center;gap:.8rem;border-top:1px solid var(--ln);padding-top:1.1rem}
-.tq-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));display:grid;place-items:center;font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;color:var(--bg);flex-shrink:0}
-.tq-n{font-family:'Syne',sans-serif;font-weight:600;font-size:.85rem;color:var(--w)}
-.tq-r{font-family:'JetBrains Mono',monospace;font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--m2);margin-top:.1rem}
 
 /* ── FOOTER ── */
 footer{border-top:1px solid var(--ln);padding:1.8rem clamp(1.5rem,5vw,4.5rem);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
@@ -240,26 +201,26 @@ footer{border-top:1px solid var(--ln);padding:1.8rem clamp(1.5rem,5vw,4.5rem);di
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-  .ab-grid,.co-grid,.tm-stage{grid-template-columns:1fr}
+  .p-link{grid-template-columns:1fr auto;gap:1rem}
+  .p-thumb{display:none}
+  .ab-grid,.co-grid{grid-template-columns:1fr}
   .ab-placeholder{max-width:320px}
-  .sk-grid{grid-template-columns:1fr}
-  .sk-cat{border-right:none}
   .n-links,.n-cv{display:none}
   .n-burger{display:flex}
-  .p-bi{padding:0 1rem 1.5rem}
-  .p-row{grid-template-columns:2.5rem 1fr auto;gap:1rem}
-  .tc-wrap{min-height:unset}
-  .tc-card{position:relative;inset:unset}
-  .tc-card.act{display:flex}
-  .tc-card:not(.act){display:none}
   footer{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:600px){
   .ab-facts{grid-template-columns:1fr}
-  .tm-row{height:48px}
 }
 .n-cv{border:none;padding:0;color:var(--m)}
 .n-cv:hover{background:none;color:var(--gold)}
+
+/* ── HERO v11 ── */
+.h-role{font-family:'Syne',sans-serif;font-weight:600;font-size:clamp(1rem,2.1vw,1.55rem);letter-spacing:-.01em;color:var(--w);margin-bottom:1.4rem}
+.h-role i{font-style:normal;color:var(--gold);margin:0 .55em}
+.h-sub{max-width:58ch}
+.h-btns{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;margin-top:2.2rem}
+@media(pointer:fine){a,button{cursor:none}}
 </style>
 </head>
 <body>
@@ -297,7 +258,7 @@ footer{border-top:1px solid var(--ln);padding:1.8rem clamp(1.5rem,5vw,4.5rem);di
   </div>
   <div class="i-center">
     <div class="i-logo">KDB<span>.</span></div>
-    <div class="i-sub">Software Engineer · Douala CM</div>
+    <div class="i-sub">Développeur logiciel · Douala CM</div>
     <div class="i-bar"></div>
   </div>
 </div>
@@ -313,7 +274,7 @@ footer{border-top:1px solid var(--ln);padding:1.8rem clamp(1.5rem,5vw,4.5rem);di
   <a class="n-a" href="#skills" onclick="closeMob()">Compétences</a>
   <a class="n-a" href="#about" onclick="closeMob()">À propos</a>
   <a class="n-a" href="#contact" onclick="closeMob()">Contact</a>
-  <button class="n-cv" onclick="dlCV();closeMob()">CV PDF</button>
+  <a class="n-cv" href="cv-kameni-djamedeu-brayan.pdf" download onclick="closeMob()">CV ↓</a>
 </div>
 
 <canvas id="bg"></canvas>
@@ -328,60 +289,117 @@ footer{border-top:1px solid var(--ln);padding:1.8rem clamp(1.5rem,5vw,4.5rem);di
     <a class="n-a" href="#about">À propos</a>
     <a class="n-a" href="#contact">Contact</a>
   </div>
-  <button class="n-cv" onclick="dlCV()">CV PDF</button>
+  <a class="n-cv" href="cv-kameni-djamedeu-brayan.pdf" download>CV ↓</a>
   <button class="n-burger" id="burger" onclick="toggleMob()"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
 <section id="home">
   <div class="h-content">
-    <div class="h-tag h-in" style="--d:.05s">Software Engineer</div>
     <h1 class="h-h1">
-      <span class="ln"><span style="--d:.15s">Kameni</span></span>
-      <span class="ln"><span style="--d:.27s">Djamedeu Brayan</span></span>
+      <span class="ln"><span style="--d:.1s">Kameni</span></span>
+      <span class="ln"><span style="--d:.22s">Djamedeu Brayan</span></span>
     </h1>
-    <p class="h-sub h-in" style="--d:.5s">Web, desktop, mobile, IA &amp; LLM —<br>je construis des <em>solutions adaptées</em>.</p>
+    <div class="h-role h-in" style="--d:.45s">Développeur logiciel<i>|</i>Applications &amp; solutions intelligentes</div>
+    <p class="h-sub h-in" style="--d:.6s">Je conçois et développe des applications web, desktop et mobiles, en associant ingénierie logicielle et intelligence artificielle pour répondre à des problèmes concrets.</p>
+    <div class="h-btns h-in" style="--d:.75s">
+      <a class="btn-p" href="cv-kameni-djamedeu-brayan.pdf" download>Télécharger mon CV ↓</a>
+      <a class="btn-g" href="#work">Voir mes projets</a>
+    </div>
   </div>
   <div class="h-foot">
-    <span class="h-in" style="--d:.8s">Douala — Cameroun</span>
-    <a class="h-in" style="--d:.9s" href="#work">Scroll pour explorer ↓</a>
+    <span class="h-in" style="--d:.95s">Douala — Cameroun</span>
+    <a class="h-in" style="--d:1.05s" href="#work">Scroll pour explorer ↓</a>
   </div>
 </section>
 
 <!-- WORK -->
 <section id="work">
-  <div class="w-head reveal"><div><div class="s-ey">Projets sélectionnés</div><h2 class="s-ti">Travaux<span>.</span></h2></div><span class="w-count">04 projets</span></div>
+  <div class="w-head reveal"><div><div class="s-ey">Projets sélectionnés</div><h2 class="s-ti">Travaux<span>.</span></h2></div><span class="w-count">05 projets</span></div>
   <ul class="p-list">
     <li class="p-item reveal">
-      <div class="p-row" onclick="togP(this)"><span class="p-num">01</span><div><div class="p-name">INVENTARUS</div><div class="p-tags"><span class="p-tag">Desktop</span><span class="p-tag">C# · WPF</span><span class="p-tag">MySQL</span></div></div><span class="p-arr">↗</span></div>
-      <div class="p-body"><div class="p-bi"><p class="p-desc">Application desktop de gestion des stocks en C#/WPF/MySQL. Entrées/sorties temps réel, alertes de seuil, tableau de bord analytique. Livrée en production chez SOFTWIFY.</p><div class="p-stack"><span class="p-chip">C#</span><span class="p-chip">WPF</span><span class="p-chip">MySQL</span><span class="p-chip">XAML</span><span class="p-chip">MVVM</span></div></div></div>
+      <a class="p-link" href="catalogue-v2.html#projects-section">
+        <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none"><rect width="180" height="112" fill="#0a0a0f"/><rect width="30" height="112" fill="#101016"/><rect x="7" y="9" width="16" height="5" rx="2.5" fill="#f00"/><rect x="7" y="24" width="16" height="3" rx="1.5" fill="#2b2b35"/><rect x="7" y="33" width="16" height="3" rx="1.5" fill="#2b2b35"/><rect x="7" y="42" width="16" height="3" rx="1.5" fill="#2b2b35"/><g fill="#13131a" stroke="#23232d"><rect x="38" y="9" width="42" height="24" rx="3"/><rect x="85" y="9" width="42" height="24" rx="3"/><rect x="132" y="9" width="42" height="24" rx="3"/><rect x="38" y="39" width="82" height="42" rx="3"/><rect x="125" y="39" width="49" height="42" rx="3"/></g><g fill="#6b6b78"><rect x="43" y="15" width="14" height="3" rx="1.5"/><rect x="90" y="15" width="14" height="3" rx="1.5"/><rect x="137" y="15" width="14" height="3" rx="1.5"/></g><rect x="43" y="22" width="24" height="6" rx="2" fill="#f00"/><rect x="90" y="22" width="24" height="6" rx="2" fill="#f0ede8"/><rect x="137" y="22" width="24" height="6" rx="2" fill="#f0ede8"/><g fill="#3a3a46"><rect x="46" y="62" width="7" height="14"/><rect x="58" y="54" width="7" height="22"/><rect x="70" y="58" width="7" height="18"/><rect x="94" y="52" width="7" height="24"/><rect x="106" y="60" width="7" height="16"/></g><rect x="82" y="46" width="7" height="30" fill="#f00"/><circle cx="149.5" cy="60" r="13" stroke="#23232d" stroke-width="5"/><circle cx="149.5" cy="60" r="13" stroke="#f00" stroke-width="5" stroke-dasharray="52 82" transform="rotate(-90 149.5 60)"/><g fill="#17171f"><rect x="38" y="87" width="136" height="4" rx="2"/><rect x="38" y="95" width="136" height="4" rx="2"/><rect x="38" y="103" width="136" height="4" rx="2"/></g></svg></div>
+        <div>
+          <div class="p-name"><span class="p-n">01.</span> INVENTARUS</div>
+          <span class="p-badge">Projet en entreprise</span>
+          <div class="p-stack">C# · WPF · MySQL · MVVM</div>
+          <p class="p-desc">Application desktop de gestion de stocks : suivi des entrées et sorties, alertes de seuil, rôles utilisateurs et architecture MVVM. Livrée dans le cadre de mon stage chez SOFTWIFY.</p>
+        </div>
+        <span class="p-arr">↗</span>
+      </a>
     </li>
     <li class="p-item reveal">
-      <div class="p-row" onclick="togP(this)"><span class="p-num">02</span><div><div class="p-name">Shadow.io</div><div class="p-tags"><span class="p-tag">IA Platform</span><span class="p-tag">Astro · TS</span><span class="p-tag">LLM</span></div></div><span class="p-arr">↗</span></div>
-      <div class="p-body"><div class="p-bi"><p class="p-desc">Plateforme qui transforme la demande d'un client en solution digitale complète — site généré automatiquement, cahier des charges, devis, suivi de projet. Propulsé par des LLM.</p><div class="p-stack"><span class="p-chip">Astro</span><span class="p-chip">TypeScript</span><span class="p-chip">LLM API</span><span class="p-chip">Node.js</span></div></div></div>
+      <a class="p-link" href="catalogue-v2.html#projects-section">
+        <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none"><rect width="180" height="112" fill="#0a0a0f"/><rect x="58" y="14" width="64" height="6" rx="3" fill="#f0ede8"/><rect x="72" y="25" width="36" height="3" rx="1.5" fill="#3a3a46"/><rect x="28" y="40" width="124" height="18" rx="9" fill="#13131a" stroke="#23232d"/><rect x="38" y="47" width="52" height="4" rx="2" fill="#3a3a46"/><circle cx="141" cy="49" r="6" fill="#f00"/><g fill="#13131a" stroke="#23232d"><rect x="28" y="68" width="38" height="34" rx="4"/><rect x="71" y="68" width="38" height="34" rx="4"/><rect x="114" y="68" width="38" height="34" rx="4"/></g><g fill="#3a3a46"><rect x="34" y="75" width="20" height="3" rx="1.5"/><rect x="77" y="75" width="20" height="3" rx="1.5"/><rect x="120" y="75" width="20" height="3" rx="1.5"/><rect x="34" y="83" width="26" height="3" rx="1.5"/><rect x="77" y="83" width="26" height="3" rx="1.5"/><rect x="120" y="83" width="26" height="3" rx="1.5"/></g><circle cx="36" cy="94" r="3" fill="#f00"/><circle cx="79" cy="94" r="3" fill="#f0ede8"/><circle cx="122" cy="94" r="3" fill="#f0ede8"/></svg></div>
+        <div>
+          <div class="p-name"><span class="p-n">02.</span> Shadow.io</div>
+          <span class="p-badge">Projet différenciant</span>
+          <div class="p-stack">Astro · TypeScript · LLM · API</div>
+          <p class="p-desc">Plateforme qui transforme la demande d'un client en solution digitale — site vitrine, cahier des charges, devis et suivi — grâce à l'exploitation de modèles de langage.</p>
+        </div>
+        <span class="p-arr">↗</span>
+      </a>
     </li>
     <li class="p-item reveal">
-      <div class="p-row" onclick="togP(this)"><span class="p-num">03</span><div><div class="p-name">MR Service</div><div class="p-tags"><span class="p-tag">Mobile · Web</span><span class="p-tag">Cameroun</span></div></div><span class="p-arr">↗</span></div>
-      <div class="p-body"><div class="p-bi"><p class="p-desc">Plateforme mobile/web pour petits vendeurs au Cameroun — mise en relation, gestion commandes, paiement mobile intégré.</p><div class="p-stack"><span class="p-chip">React Native</span><span class="p-chip">Node.js</span><span class="p-chip">MySQL</span></div></div></div>
+      <a class="p-link" href="catalogue-v2.html#projects-section">
+        <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none"><rect width="180" height="112" fill="#0a0a0f"/><rect x="64" y="8" width="52" height="100" rx="9" fill="#101016" stroke="#3a3a46" stroke-width="1.5"/><rect x="72" y="16" width="30" height="4" rx="2" fill="#f0ede8"/><circle cx="108" cy="18" r="3" fill="#f00"/><g fill="#17171f" stroke="#23232d"><rect x="71" y="27" width="38" height="16" rx="3"/><rect x="71" y="47" width="38" height="16" rx="3"/><rect x="71" y="67" width="38" height="16" rx="3"/></g><g fill="#3a3a46"><rect x="85" y="32" width="20" height="3" rx="1.5"/><rect x="85" y="52" width="20" height="3" rx="1.5"/><rect x="85" y="72" width="20" height="3" rx="1.5"/></g><rect x="75" y="31" width="7" height="7" rx="2" fill="#f00"/><rect x="75" y="51" width="7" height="7" rx="2" fill="#f0ede8"/><rect x="75" y="71" width="7" height="7" rx="2" fill="#f0ede8"/><rect x="71" y="90" width="38" height="11" rx="5.5" fill="#f00"/></svg></div>
+        <div>
+          <div class="p-name"><span class="p-n">03.</span> MR Service</div>
+          <span class="p-badge">Projet applicatif</span>
+          <div class="p-stack">React Native · Node.js · MySQL</div>
+          <p class="p-desc">Plateforme mobile et web pour les petits vendeurs au Cameroun : gestion des commandes et mise en relation entre clients et vendeurs.</p>
+        </div>
+        <span class="p-arr">↗</span>
+      </a>
     </li>
     <li class="p-item reveal">
-      <div class="p-row" onclick="togP(this)"><span class="p-num">04</span><div><div class="p-name">Portfolio · Ce site</div><div class="p-tags"><span class="p-tag">Astro · TS</span><span class="p-tag">Design</span></div></div><span class="p-arr">↗</span></div>
-      <div class="p-body"><div class="p-bi"><p class="p-desc">Portfolio conçu comme un produit — scroll continu, animations au déclenchement, responsive natif. Codebase Astro + TypeScript.</p><div class="p-stack"><span class="p-chip">Astro</span><span class="p-chip">TypeScript</span><span class="p-chip">CSS</span></div></div></div>
+      <a class="p-link" href="catalogue-v2.html#projects-section">
+        <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none"><rect width="180" height="112" fill="#0a0a0f"/><rect x="64" y="8" width="52" height="100" rx="9" fill="#101016" stroke="#3a3a46" stroke-width="1.5"/><rect x="72" y="16" width="36" height="3" rx="1.5" fill="#23232d"/><rect x="72" y="16" width="22" height="3" rx="1.5" fill="#f00"/><rect x="72" y="25" width="30" height="4" rx="2" fill="#f0ede8"/><rect x="72" y="35" width="36" height="12" rx="3" fill="#17171f" stroke="#23232d"/><rect x="76" y="40" width="18" height="3" rx="1.5" fill="#3a3a46"/><circle cx="76" cy="58" r="3" stroke="#3a3a46"/><circle cx="76" cy="58" r="1.4" fill="#f00"/><rect x="82" y="56.5" width="22" height="3" rx="1.5" fill="#3a3a46"/><circle cx="76" cy="68" r="3" stroke="#3a3a46"/><rect x="82" y="66.5" width="16" height="3" rx="1.5" fill="#3a3a46"/><line x1="74" y1="82" x2="106" y2="82" stroke="#23232d" stroke-width="2"/><circle cx="74" cy="82" r="2.2" fill="#3a3a46"/><circle cx="82" cy="82" r="2.2" fill="#3a3a46"/><circle cx="90" cy="82" r="3" fill="#f00"/><circle cx="98" cy="82" r="2.2" fill="#3a3a46"/><circle cx="106" cy="82" r="2.2" fill="#3a3a46"/><rect x="72" y="92" width="36" height="9" rx="4.5" fill="#f00"/></svg></div>
+        <div>
+          <div class="p-name"><span class="p-n">04.</span> NeuroQuest</div>
+          <span class="p-badge">Projet hospitalier · en équipe</span>
+          <div class="p-stack">React Native · TypeScript · SQLite · NestJS · PostgreSQL</div>
+          <p class="p-desc">Application mobile d'aide au diagnostic neurologique (hors AVC) pour l'Hôpital Laquintinie de Douala. Moteur de formulaires cliniques dynamiques (14+ types de champs), base SQLite hors ligne (25+ tables), règles conditionnelles, authentification sécurisée et préparation de la synchronisation avec le backend web.</p>
+        </div>
+        <span class="p-arr">↗</span>
+      </a>
+    </li>
+    <li class="p-item reveal">
+      <a class="p-link" href="catalogue-v2.html#projects-section">
+        <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none"><rect width="180" height="112" fill="#0a0a0f"/><circle cx="90" cy="48" r="20" stroke="#3a3a46" stroke-width="1.5"/><path d="M52 108c4-22 20-30 38-30s34 8 38 30" stroke="#3a3a46" stroke-width="1.5"/><g stroke="#f00" stroke-width="2" stroke-linecap="round"><path d="M60 22v-8h8"/><path d="M120 22v-8h-8"/><path d="M60 80v8h8"/><path d="M120 80v8h-8"/></g><rect x="58" y="46" width="64" height="2" fill="#f00" opacity=".75"/><rect x="128" y="86" width="40" height="14" rx="7" fill="#13131a" stroke="#23232d"/><circle cx="137" cy="93" r="3" fill="#f00"/><rect x="143" y="91.5" width="20" height="3" rx="1.5" fill="#3a3a46"/></svg></div>
+        <div>
+          <div class="p-name"><span class="p-n">05.</span> RecoFace</div>
+          <span class="p-badge">Projet desktop</span>
+          <div class="p-stack">VB.NET · Desktop · Reconnaissance faciale</div>
+          <p class="p-desc">Application desktop qui automatise la gestion des présences : elle identifie les personnes par reconnaissance faciale et simplifie le suivi, notamment en milieu scolaire.</p>
+        </div>
+        <span class="p-arr">↗</span>
+      </a>
     </li>
   </ul>
+  <div class="w-more reveal"><a class="more-link" href="catalogue-v2.html">Voir plus <span>→</span></a></div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
   <div class="sk-inner">
-    <div class="reveal"><div class="s-ey">Ce que j'apporte</div><h2 class="s-ti">Compétences<span>.</span></h2></div>
-    <div class="sk-grid">
-      <div class="sk-cat reveal"><div class="sk-head" onclick="togS(this.parentElement)"><div class="sk-left"><div class="sk-ico ic-dev">⌨️</div><div><div class="sk-name">Développement</div><div class="sk-cnt">8 compétences</div></div></div><span class="sk-ch">▾</span></div><div class="sk-body"><div class="sk-items"><span class="sk-item">C#</span><span class="sk-item">WPF</span><span class="sk-item">HTML</span><span class="sk-item">CSS</span><span class="sk-item">JavaScript</span><span class="sk-item">TypeScript</span><span class="sk-item">Astro</span><span class="sk-item">Java</span></div></div></div>
-      <div class="sk-cat reveal"><div class="sk-head" onclick="togS(this.parentElement)"><div class="sk-left"><div class="sk-ico ic-ai">🤖</div><div><div class="sk-name">IA & LLM</div><div class="sk-cnt">5 compétences</div></div></div><span class="sk-ch">▾</span></div><div class="sk-body"><div class="sk-items"><span class="sk-item">LLM API</span><span class="sk-item">Claude</span><span class="sk-item">OpenAI</span><span class="sk-item">Prompt Eng.</span><span class="sk-item">Automatisation</span></div></div></div>
-      <div class="sk-cat reveal"><div class="sk-head" onclick="togS(this.parentElement)"><div class="sk-left"><div class="sk-ico ic-db">🗄️</div><div><div class="sk-name">Base de données</div><div class="sk-cnt">4 compétences</div></div></div><span class="sk-ch">▾</span></div><div class="sk-body"><div class="sk-items"><span class="sk-item">MySQL</span><span class="sk-item">PostgreSQL</span><span class="sk-item">SQLite</span><span class="sk-item">EF Core</span></div></div></div>
-      <div class="sk-cat reveal"><div class="sk-head" onclick="togS(this.parentElement)"><div class="sk-left"><div class="sk-ico ic-des">🎨</div><div><div class="sk-name">Design & UI</div><div class="sk-cnt">5 compétences</div></div></div><span class="sk-ch">▾</span></div><div class="sk-body"><div class="sk-items"><span class="sk-item">Figma</span><span class="sk-item">Photoshop</span><span class="sk-item">Lightroom</span><span class="sk-item">DaVinci</span><span class="sk-item">CapCut</span></div></div></div>
-      <div class="sk-cat reveal"><div class="sk-head" onclick="togS(this.parentElement)"><div class="sk-left"><div class="sk-ico ic-tl">🔧</div><div><div class="sk-name">Outils & Méthodes</div><div class="sk-cnt">6 compétences</div></div></div><span class="sk-ch">▾</span></div><div class="sk-body"><div class="sk-items"><span class="sk-item">Git</span><span class="sk-item">GitHub</span><span class="sk-item">UML</span><span class="sk-item">Merise</span><span class="sk-item">Scrum</span><span class="sk-item">VS Code</span></div></div></div>
-      <div class="sk-cat reveal"><div class="sk-head" onclick="togS(this.parentElement)"><div class="sk-left"><div class="sk-ico ic-mb">📱</div><div><div class="sk-name">Mobile & Cross-platform</div><div class="sk-cnt">3 compétences</div></div></div><span class="sk-ch">▾</span></div><div class="sk-body"><div class="sk-items"><span class="sk-item">React Native</span><span class="sk-item">PWA</span><span class="sk-item">Responsive</span></div></div></div>
+    <div class="reveal"><div class="s-ey">Ce que je maîtrise</div><h2 class="s-ti">Compétences<span>.</span></h2></div>
+    <div class="sk-table">
+      <div class="sk-row reveal"><div class="sk-dom">Développement web</div><div class="sk-tech">HTML, CSS, JavaScript, TypeScript, Tailwind CSS, Astro</div></div>
+      <div class="sk-row reveal"><div class="sk-dom">Développement desktop</div><div class="sk-tech">VB.NET, WPF, WinForms, Java, C# <em>(en cours)</em></div></div>
+      <div class="sk-row reveal"><div class="sk-dom">Développement mobile</div><div class="sk-tech">React Native (TypeScript), Flutter</div></div>
+      <div class="sk-row reveal"><div class="sk-dom">Bases de données</div><div class="sk-tech">PostgreSQL, MySQL, SQLite</div></div>
+      <div class="sk-row reveal"><div class="sk-dom">IA &amp; automatisation</div><div class="sk-tech">API LLM, OpenAI, Claude, Prompt Engineering</div></div>
+      <div class="sk-row reveal"><div class="sk-dom">Outils &amp; méthodes</div><div class="sk-tech">Git, GitHub, Figma, UML, Merise</div></div>
+    </div>
+    <div class="sk-sec reveal">
+      <h3 class="sk-sec-t">Compétences complémentaires</h3>
+      <p class="sk-sec-d">En dehors du développement, je pratique la création visuelle.</p>
+      <div class="sk-table">
+      <div class="sk-row reveal"><div class="sk-dom">Montage vidéo</div><div class="sk-tech">DaVinci Resolve, CapCut</div></div>
+      <div class="sk-row reveal"><div class="sk-dom">Design graphique &amp; photo</div><div class="sk-tech">Photoshop, Lightroom</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -391,21 +409,21 @@ footer{border-top:1px solid var(--ln);padding:1.8rem clamp(1.5rem,5vw,4.5rem);di
   <div class="ab-grid">
     <div class="ab-photo reveal from-left">
       <div class="ab-placeholder"><span>KDB.</span></div>
-      <div class="ab-badge"><div class="ab-status"><div class="dot"></div>Disponible · Freelance</div></div>
+      <div class="ab-badge"><div class="ab-status"><div class="dot"></div>Ouvert aux opportunités</div></div>
     </div>
     <div class="reveal from-right">
       <div class="s-ey">Qui je suis</div>
       <h2 class="s-ti">À propos<span>.</span></h2>
       <div class="ab-bio">
-        <p>Je suis <strong>Kameni Djamedeu Brayan</strong>, alias <strong>Shadow</strong> — Software Engineer en BTS Génie Logiciel à l'IUC de Douala.</p>
-        <p>Ce qui me distingue : j'intègre de l'<strong>IA et des modèles LLM</strong> quand ça change réellement le résultat — automatisation, génération structurée, traitement intelligent.</p>
-        <p>Stage chez <strong>SOFTWIFY</strong>, travaux à l'<strong>Institut 3iAC</strong>, projets freelance en cours.</p>
+        <p>Je suis <strong>Kameni Djamedeu Brayan</strong>, développeur logiciel et étudiant en Génie Logiciel à l'IUC de Douala.</p>
+        <p>Je conçois et développe des solutions informatiques en accordant une attention particulière à leur architecture, leur logique métier et leur utilité. Je m'intéresse également à l'intégration de l'<strong>intelligence artificielle et des modèles LLM</strong> pour concevoir des fonctionnalités intelligentes, automatiser des processus et enrichir l'expérience utilisateur.</p>
+        <p>Mon parcours comprend une expérience en entreprise chez <strong>SOFTWIFY</strong>, des travaux réalisés à l'<strong>Institut 3iAC</strong> ainsi que plusieurs projets personnels et missions freelance.</p>
       </div>
       <div class="ab-facts">
         <div class="af"><div class="af-l">Localisation</div><div class="af-v">Douala, Cameroun</div></div>
-        <div class="af"><div class="af-l">Formation</div><div class="af-v">BTS GL · IUC</div></div>
+        <div class="af"><div class="af-l">Formation</div><div class="af-v">Génie Logiciel · IUC</div></div>
         <div class="af"><div class="af-l">Expérience</div><div class="af-v">SOFTWIFY · 3iAC</div></div>
-        <div class="af"><div class="af-l">Disponibilité</div><div class="af-v">Freelance · CDI</div></div>
+        <div class="af"><div class="af-l">Recherche</div><div class="af-v">Emploi · Stage · Freelance</div></div>
       </div>
       <a class="btn-p" href="#contact">Travaillons ensemble →</a>
     </div>
@@ -418,45 +436,22 @@ footer{border-top:1px solid var(--ln);padding:1.8rem clamp(1.5rem,5vw,4.5rem);di
     <div class="co-grid">
       <div class="reveal from-left">
         <h2 class="co-big">Parlons de<br>votre <em>projet.</em></h2>
-        <p class="co-desc">Un projet en tête ? Une mission freelance ? Réponse sous 24h.</p>
-        <div class="co-links">
-          <a class="co-link" href="mailto:kdb.shadow@gmail.com"><span style="width:24px;text-align:center">✉</span><span style="flex:1">kdb.shadow@gmail.com</span><span class="co-arr">→</span></a>
-          <a class="co-link" href="https://github.com/" target="_blank"><span style="width:24px;text-align:center">⌥</span><span style="flex:1">GitHub</span><span class="co-arr">→</span></a>
-          <a class="co-link" href="https://linkedin.com/" target="_blank"><span style="width:24px;text-align:center">in</span><span style="flex:1">LinkedIn</span><span class="co-arr">→</span></a>
-          <a class="co-link" href="https://instagram.com/shadow.kdb" target="_blank"><span style="width:24px;text-align:center">◈</span><span style="flex:1">@shadow.kdb</span><span class="co-arr">→</span></a>
+        <p class="co-desc">Un besoin, une mission, une opportunité ? Décrivez-moi votre projet ou écrivez-moi directement.</p>
+        <div class="co-opps">
+          <div class="co-opps-l">Opportunités recherchées</div>
+          <div class="co-opps-list"><span>Emploi</span><span>Stage</span><span>Missions freelance</span></div>
         </div>
       </div>
-      <div class="co-form reveal from-right">
-        <div><label class="f-label">Nom</label><input class="f-input" type="text" placeholder="Votre nom"></div>
-        <div><label class="f-label">Email</label><input class="f-input" type="email" placeholder="votre@email.com"></div>
-        <div><label class="f-label">Message</label><textarea class="f-textarea" placeholder="Décrivez votre projet..."></textarea></div>
-        <button class="f-submit">Envoyer →</button>
+      <div class="co-right reveal from-right">
+        <a class="co-main" href="https://shadow-io.vercel.app" target="_blank" rel="noopener"><span class="co-main-t">Décrire mon besoin</span><span class="co-main-s">Via Shadow.io — présentez votre projet en ligne</span><span class="co-arr">↗</span></a>
+        <div class="co-links">
+          <a class="co-link" href="https://wa.me/237651061890" target="_blank" rel="noopener"><span>WhatsApp</span><b>+237 651 061 890</b><span class="co-arr">→</span></a>
+          <a class="co-link" href="mailto:brayankameni5@gmail.com"><span>E-mail</span><b>brayankameni5@gmail.com</b><span class="co-arr">→</span></a>
+          <a class="co-link" href="https://github.com/brayano45" target="_blank" rel="noopener"><span>GitHub</span><b>brayano45</b><span class="co-arr">→</span></a>
+          <a class="co-link" href="https://www.linkedin.com/in/brayan-kameni-5901b8408/" target="_blank" rel="noopener"><span>LinkedIn</span><b>Brayan Kameni</b><span class="co-arr">→</span></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testi">
-  <div class="tm-wrap">
-    <div class="tm-row"><div class="tm-track f" id="tm1"></div></div>
-    <div class="tm-row"><div class="tm-track r" id="tm2"></div></div>
-    <div class="tm-row"><div class="tm-track f" id="tm3"></div></div>
-  </div>
-  <div class="tm-stage">
-    <div class="reveal from-left">
-      <div class="s-ey">Ils en parlent</div>
-      <h2 class="s-ti">Ce qu'on<br>dit de <span>moi.</span></h2>
-      <p style="color:var(--m);font-size:.9rem;line-height:1.8;max-width:36ch">Des collègues, clients et encadrants avec qui j'ai construit des choses concrètes.</p>
-      <div class="tc-cnt"><span class="tc-cur" id="tcCur">01</span><span style="color:var(--ln)">/</span><span>04</span></div>
-      <div class="tc-btns">
-        <button class="tc-btn" onclick="tNav(-1)">←</button>
-        <button class="tc-btn" onclick="tNav(1)">→</button>
-        <div class="tc-prog"><div class="tc-pf" id="tcPf"></div></div>
-      </div>
-      <div class="tc-dots" id="tcDots"></div>
-    </div>
-    <div class="reveal from-right"><div class="tc-wrap" id="tcWrap"></div></div>
   </div>
 </section>
 
@@ -464,10 +459,11 @@ footer{border-top:1px solid var(--ln);padding:1.8rem clamp(1.5rem,5vw,4.5rem);di
 <footer class="reveal">
   <span class="ft-copy">© 2026 Kameni Djamedeu Brayan · Shadow</span>
   <div class="ft-soc">
-    <a class="ft-a" href="mailto:kdb.shadow@gmail.com">Email</a>
-    <a class="ft-a" href="https://github.com/" target="_blank">GitHub</a>
-    <a class="ft-a" href="https://linkedin.com/" target="_blank">LinkedIn</a>
-    <a class="ft-a" href="https://instagram.com/shadow.kdb" target="_blank">Instagram</a>
+    <a class="ft-a" href="mailto:brayankameni5@gmail.com">E-mail</a>
+    <a class="ft-a" href="https://wa.me/237651061890" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="ft-a" href="https://github.com/brayano45" target="_blank" rel="noopener">GitHub</a>
+    <a class="ft-a" href="https://www.linkedin.com/in/brayan-kameni-5901b8408/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="ft-a" href="https://instagram.com/shadow.kdb" target="_blank" rel="noopener">Instagram</a>
   </div>
 </footer>
 
@@ -531,7 +527,7 @@ document.querySelectorAll('a,button').forEach(function(el){
 /* ── NAV ── */
 window.addEventListener('scroll',function(){
   document.getElementById('nav').classList.toggle('sc',scrollY>40);
-  var ids=['home','work','skills','about','contact','testi'],cur='';
+  var ids=['home','work','skills','about','contact'],cur='';
   ids.forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=90)cur=id;});
   document.querySelectorAll('.n-a').forEach(function(a){a.classList.toggle('act',a.getAttribute('href')==='#'+cur);});
 },{passive:true});
@@ -557,69 +553,6 @@ var cObs=new IntersectionObserver(function(entries){
   });
 },{threshold:.5});
 document.querySelectorAll('[data-cnt]').forEach(function(el){cObs.observe(el);});
-
-/* ── PROJECTS ── */
-function togP(row){var b=row.parentElement.querySelector('.p-body'),open=b.classList.contains('open');document.querySelectorAll('.p-body.open').forEach(function(x){x.classList.remove('open');});if(!open)b.classList.add('open');}
-
-/* ── SKILLS ── */
-function togS(cat){var open=cat.classList.contains('op');document.querySelectorAll('.sk-cat.op').forEach(function(x){x.classList.remove('op');});if(!open)cat.classList.add('op');}
-
-/* ── TESTIMONIALS ── */
-var TESTI=[
-  {t:'Brayan a livré INVENTARUS dans les délais avec une qualité de code propre. L\'interface WPF était fluide, la gestion des stocks robuste. Un développeur sérieux.',n:'Encadrant SOFTWIFY',r:'Responsable technique · SOFTWIFY',i:'S'},
-  {t:'Ce qui distingue son travail : il pense la solution avant d\'écrire une ligne de code. Il pose les bonnes questions et s\'adapte à chaque contrainte plateforme.',n:'Collaborateur 3iAC',r:'Institut d\'Ingénierie Informatique · 3iAC',i:'A'},
-  {t:'Shadow a intégré des modèles LLM dans un workflow interne qu\'on pensait non-automatisable. Résultat : -60% de temps de traitement. Pragmatique et efficace.',n:'Client Freelance',r:'Porteur de projet digital · Douala',i:'C'},
-  {t:'Il prend le problème en entier. Il revient avec une solution qui marche et a déjà anticipé les cas limites. Rare pour un profil aussi jeune.',n:'Mentor IUC',r:'Enseignant-chercheur · IUC Douala',i:'M'}
-];
-var tIdx=0,tAnim,tStart=Date.now();
-var tcWrap=document.getElementById('tcWrap');
-var tcDots=document.getElementById('tcDots');
-var tcCur=document.getElementById('tcCur');
-var tcPf=document.getElementById('tcPf');
-
-function buildT(){
-  if(!tcWrap)return;
-  tcWrap.innerHTML='';tcDots.innerHTML='';
-  TESTI.forEach(function(t,i){
-    var c=document.createElement('div');
-    c.className='tc-card'+(i===0?' act':'');
-    c.innerHTML='<span class="tq-m">❝</span><p class="tq-t">'+t.t+'</p><div class="tq-a"><div class="tq-av">'+t.i+'</div><div><div class="tq-n">'+t.n+'</div><div class="tq-r">'+t.r+'</div></div></div>';
-    tcWrap.appendChild(c);
-    var d=document.createElement('div');
-    d.className='tc-dot'+(i===0?' act':'');
-    d.onclick=function(){tGo(i);};
-    tcDots.appendChild(d);
-  });
-}
-function tGo(n){
-  var cs=[].slice.call(tcWrap.querySelectorAll('.tc-card'));
-  var ds=[].slice.call(tcDots.querySelectorAll('.tc-dot'));
-  cs[tIdx].classList.remove('act');cs[tIdx].classList.add('out');ds[tIdx].classList.remove('act');
-  var prev=tIdx;tIdx=n;
-  setTimeout(function(){cs[prev].classList.remove('out');cs[tIdx].classList.add('act');ds[tIdx].classList.add('act');if(tcCur)tcCur.textContent=String(tIdx+1).padStart(2,'0');tStart=Date.now();},280);
-}
-function tNav(d){tGo((tIdx+d+TESTI.length)%TESTI.length);}
-function progLoop(){
-  if(tcPf){var p=Math.min((Date.now()-tStart)/5000,1);tcPf.style.width=(p*100)+'%';if(p>=1){tNav(1);tStart=Date.now();}}
-  tAnim=requestAnimationFrame(progLoop);
-}
-if(tcWrap){
-  tcWrap.addEventListener('mouseenter',function(){cancelAnimationFrame(tAnim);});
-  tcWrap.addEventListener('mouseleave',function(){tStart=Date.now();progLoop();});
-}
-
-/* TESTIMONIALS MARQUEE */
-var TW=['SOFTWIFY','INVENTARUS','LLM · IA','ASTRO','SHADOW KDB','C#','MYSQL','DOUALA','TYPESCRIPT','WPF','NODE.JS','FIGMA','FREELANCE','ENGINEER'];
-[1,2,3].forEach(function(n){
-  var el=document.getElementById('tm'+n);
-  if(!el)return;
-  var sh=TW.slice().sort(function(){return Math.random()-.5});
-  var h='';
-  for(var r=0;r<4;r++)sh.forEach(function(w){h+='<span class="tm-item">'+w+'<span class="tm-sep">✦</span></span>';});
-  el.innerHTML=h;
-});
-buildT();progLoop();
-
 
 /* ── FOND ANIMÉ GLOBAL : réseau de particules (Canvas 2D, fixe sur tout le site) ── */
 (function(){
@@ -668,8 +601,6 @@ buildT();progLoop();
   frame();
 })();
 
-/* ── CV ── */
-function dlCV(){alert('CV PDF — remplacer par le lien du fichier.');}
 </script>
 </body>
 </html>

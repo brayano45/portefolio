@@ -4,7 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KDB — Développeur logiciel</title>
+  <title>Kameni Djamedeu Brayan (KDB) — Développeur Logiciel & Solutions Intelligentes</title>
+  <meta name="description" content="Portfolio de Kameni Djamedeu Brayan (KDB), développeur logiciel basé à Douala, Cameroun. Applications web, desktop, mobiles et intégration de solutions IA.">
+  <meta name="author" content="Kameni Djamedeu Brayan">
+  <meta property="og:title" content="Kameni Djamedeu Brayan (KDB) — Développeur Logiciel">
+  <meta property="og:description" content="Développeur d'applications web, desktop et mobiles, alliant ingénierie logicielle et intelligence artificielle.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="theme-color" content="#07070a">
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
@@ -431,14 +438,16 @@
       min-height: 100svh;
       display: flex;
       align-items: center;
-      padding: 0 clamp(1.5rem, 6vw, 5rem)
+      padding: 0 clamp(1.5rem, 6vw, 5rem);
+      position: relative;
     }
 
     .h-content {
       width: 100%;
-      max-width: 1300px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding-top: 60px
+      padding-top: clamp(60px, 10vh, 90px);
+      padding-bottom: clamp(5rem, 11vh, 8rem);
     }
 
     .h-tag {
@@ -453,10 +462,10 @@
     .h-h1 {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: clamp(1.7rem, 6.8vw, 6rem);
-      line-height: .98;
-      letter-spacing: -.04em;
-      margin-bottom: 2rem
+      font-size: clamp(2rem, 4.4vw, 3.85rem);
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      margin-bottom: 1.5rem
     }
 
     .h-h1 .ln {
@@ -1240,28 +1249,31 @@
     .h-role {
       font-family: 'Syne', sans-serif;
       font-weight: 600;
-      font-size: clamp(1rem, 2.1vw, 1.55rem);
+      font-size: clamp(.92rem, 1.45vw, 1.25rem);
       letter-spacing: -.01em;
       color: var(--w);
-      margin-bottom: 1.4rem
+      margin-bottom: 1.15rem;
     }
 
     .h-role i {
       font-style: normal;
       color: var(--gold);
-      margin: 0 .55em
+      margin: 0 .55em;
     }
 
     .h-sub {
-      max-width: 58ch
+      font-size: clamp(.88rem, 1.1vw, 1rem);
+      color: rgba(240, 237, 232, .55);
+      line-height: 1.7;
+      max-width: 54ch;
     }
 
     .h-btns {
       display: flex;
       align-items: center;
-      gap: 1.6rem;
+      gap: 1.3rem;
       flex-wrap: wrap;
-      margin-top: 2.2rem
+      margin-top: 1.85rem;
     }
 
     @media(pointer:fine) {
@@ -1333,7 +1345,7 @@
     <a class="n-a" href="#skills" onclick="closeMob()">Compétences</a>
     <a class="n-a" href="#about" onclick="closeMob()">À propos</a>
     <a class="n-a" href="#contact" onclick="closeMob()">Contact</a>
-    <a class="n-cv" href="cv-kameni-djamedeu-brayan.pdf" download onclick="closeMob()">CV ↓</a>
+    <a class="n-cv" href="CV_Brayan_Kameni.pdf" download onclick="closeMob()">CV ↓</a>
   </div>
 
   <canvas id="bg"></canvas>
@@ -1348,7 +1360,7 @@
       <a class="n-a" href="#about">À propos</a>
       <a class="n-a" href="#contact">Contact</a>
     </div>
-    <a class="n-cv" href="cv-kameni-djamedeu-brayan.pdf" download>CV ↓</a>
+    <a class="n-cv" href="CV_Brayan_Kameni.pdf" download>CV ↓</a>
     <button class="n-burger" id="burger" onclick="toggleMob()"><span></span><span></span><span></span></button>
   </nav>
 
@@ -1364,7 +1376,7 @@
       <p class="h-sub h-in" style="--d:.6s">Je conçois et développe des applications web, desktop et mobiles, en
         associant ingénierie logicielle et intelligence artificielle pour répondre à des problèmes concrets.</p>
       <div class="h-btns h-in" style="--d:.75s">
-        <a class="btn-p" href="cv-kameni-djamedeu-brayan.pdf" download>Télécharger mon CV ↓</a>
+        <a class="btn-p" href="CV_Brayan_Kameni.pdf" download>Télécharger mon CV ↓</a>
         <a class="btn-g" href="#work">Voir mes projets</a>
       </div>
     </div>
@@ -1384,7 +1396,7 @@
     </div>
     <ul class="p-list">
       <li class="p-item reveal">
-        <a class="p-link" href="catalogue-v2.html#projects-section">
+        <a class="p-link" href="catalogue-v2.html#proj-inventarus">
           <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none">
               <rect width="180" height="112" fill="#0a0a0f" />
               <rect width="30" height="112" fill="#101016" />
@@ -1435,7 +1447,7 @@
         </a>
       </li>
       <li class="p-item reveal">
-        <a class="p-link" href="catalogue-v2.html#projects-section">
+        <a class="p-link" href="catalogue-v2.html#proj-shadow">
           <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none">
               <rect width="180" height="112" fill="#0a0a0f" />
               <rect x="58" y="14" width="64" height="6" rx="3" fill="#f0ede8" />
@@ -1471,7 +1483,7 @@
         </a>
       </li>
       <li class="p-item reveal">
-        <a class="p-link" href="catalogue-v2.html">
+        <a class="p-link" href="catalogue-v2.html#proj-mrservice">
           <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none">
               <rect width="180" height="112" fill="#0a0a0f" />
               <rect x="64" y="8" width="52" height="100" rx="9" fill="#101016" stroke="#3a3a46" stroke-width="1.5" />
@@ -1503,7 +1515,7 @@
         </a>
       </li>
       <li class="p-item reveal">
-        <a class="p-link" href="catalogue-v2.html#projects-section">
+        <a class="p-link" href="catalogue-v2.html#proj-neuroquest">
           <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none">
               <rect width="180" height="112" fill="#0a0a0f" />
               <rect x="64" y="8" width="52" height="100" rx="9" fill="#101016" stroke="#3a3a46" stroke-width="1.5" />
@@ -1538,7 +1550,7 @@
         </a>
       </li>
       <li class="p-item reveal">
-        <a class="p-link" href="catalogue-v2.html#projects-section">
+        <a class="p-link" href="catalogue-v2.html#proj-recoface">
           <div class="p-thumb"><svg viewBox="0 0 180 112" fill="none">
               <rect width="180" height="112" fill="#0a0a0f" />
               <circle cx="90" cy="48" r="20" stroke="#3a3a46" stroke-width="1.5" />
